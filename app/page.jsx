@@ -30,12 +30,15 @@ export default function Home() {
                   </span>
                 </Button>
                 </Link>
-                <Button variant={"https://www.linkedin.com/in/aditya-singh-rawat-0a7416326/"}>
-                  <span className="flex">
+                <Link href={""}>
+                <Button variant={""}>
+                  <span className="flex items-center justify-center">
                     <Linkedin className="w-5 h-5 mr-2" />
-                    Linkedin
+                LinkedIn
                   </span>
                 </Button>
+                </Link>
+                
                 <Button variant={""}>
                   <span className="flex">
                     <File className="w-5 h-5 mr-2" />
