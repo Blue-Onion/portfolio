@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Particles from "@/components/Particles";
 
-
 const inter = Inter({ subsets: ["latin"] });
 const archivoBlack = Archivo_Black({
   subsets: ["latin"],
@@ -16,28 +15,37 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${[archivoBlack.className].join(" ")} relative min-h-screen overflow-hidden`}
-      >
-        {/* Background Particles */}
-        <div className="absolute min-h-screen min-w-screen bg-black  inset-0 -z-10">
-          <Particles
-            particleColors={["#ffffff", "#ffffff"]}
-            particleCount={200}
-            particleSpread={10}
-            speed={0.1}
-            particleBaseSize={100}
-            moveParticlesOnHover={false}
-            alphaParticles={false}
-            disableRotation={false}
-          />
-        </div>
+    <html lang="en" className="dark">
+      <body className={`${[archivoBlack.className].join(" ")}`}>
+        <div className="relative w-screen bg-black min-h-screen">
+          {/* Background effect */}
+          <div className="absolute inset-0 z-0">
+            <Particles
+              particleColors={["#ffffff", "#ffffff"]}
+              particleCount={200}
+              particleSpread={10}
+              speed={0.1}
+              particleBaseSize={100}
+              moveParticlesOnHover={false}
+              alphaParticles={false}
+              disableRotation={false}
+            />
+          </div>
 
-        {/* Foreground Content */}
-        <div className="relative  z-10">
-          <Navbar />
-          <main>{children}</main>
+          <div className="relative z-10">
+            <Navbar />
+
+            <main className="w-full min-h-screen ">{children}</main>
+
+            <footer className="bg-muted/50 py-10">
+              <div className="container mx-auto px-3 text-center text-gray-200">
+                <p>
+                  {" "}
+                  © {new Date().getFullYear()} Blue Onion. All rights reserved.
+                </p>
+              </div>
+            </footer>
+          </div>
         </div>
       </body>
     </html>

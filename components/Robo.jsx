@@ -1,14 +1,29 @@
-'use client';
+"use client";
+import { Suspense, useRef, useState } from 'react';
 import Spline from '@splinetool/react-spline';
 
 export default function Robo() {
+  const splineContainer = useRef();
+  const [splineApp, setSplineApp] = useState(null);
+
+  const bypassLoading = () => {
+    // Add your loading bypass logic here
+    console.log('Spline loaded');
+  };
+
   return (
-    <mai className="w-screen h-screen flex">
-      <div className="w-1/2  overflow-hidden relative">
-        <div className="absolute -top-[10%] -left-[10%] w-[120%] h-[120%] overflow-hidden">
-          <Spline scene="https://prod.spline.design/0FmzagSxHExthxG8/scene.splinecode"/>
-        </div>
-      </div>
-    </mai>
+    <div className='w-full h-full'>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Spline
+className='w-full h-full'
+          ref={splineContainer}
+          onLoad={(app) => {
+            setSplineApp(app);
+            bypassLoading();
+          }}
+          scene="/assets/robo.spline"
+        />
+      </Suspense>
+    </div>
   );
 }
