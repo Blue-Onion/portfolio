@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
           <div className="relative z-10">
             <Navbar />
 
-            <main className="w-full min-h-screen ">{children}</main>
+            <main className="w-full -mt-20 min-h-screen ">{children}</main>
 
             <footer className="bg-muted/50 py-10">
               <div className="container mx-auto px-3 text-center text-gray-200">
