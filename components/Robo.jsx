@@ -1,14 +1,9 @@
 "use client";
-import { Suspense, useRef, useState } from "react";
+import { useRef } from "react";
 import Spline from "@splinetool/react-spline";
 
-export default function Robo() {
+export default function Robo({ onReady }) {
   const splineContainer = useRef();
-  const [splineApp, setSplineApp] = useState(null);
-
-  const bypassLoading = () => {
-    console.log("Spline loaded");
-  };
 
   return (
     <div className="min-h-screen flex justify-center items-center md:justify-end">
@@ -16,24 +11,22 @@ export default function Robo() {
         <div className="flex justify-center items-center md:justify-end mt-12 md:mt-0">
           <div
             className="
-              w-[320px] h-[320px]        /* bigger for mobile */
-              sm:w-[400px] sm:h-[400px]  /* bigger for small tablets */
-              md:w-[480px] md:h-[480px]  /* bigger for medium screens */
+              w-[320px] h-[320px]
+              sm:w-[400px] sm:h-[400px]
+              md:w-[480px] md:h-[480px]
               xl:w-[560px] xl:h-[560px]
               2xl:w-[600px] 2xl:h-[600px]
             "
           >
-            <Suspense fallback={<div>Loading...</div>}>
-              <Spline
-                className="w-full h-full"
-                ref={splineContainer}
-                onLoad={(app) => {
-                  setSplineApp(app);
-                  bypassLoading();
-                }}
-                scene="/assets/robo.spline"
-              />
-            </Suspense>
+            <Spline
+              className="w-full h-full"
+              ref={splineContainer}
+              scene="/assets/robo.spline"
+              onLoad={() => {
+                console.log("Spline loaded ✅");
+                onReady?.(); // notify parent
+              }}
+            />
           </div>
         </div>
       </div>
