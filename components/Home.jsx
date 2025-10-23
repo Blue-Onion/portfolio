@@ -27,20 +27,22 @@ const Home = () => {
               {/* Buttons Section */}
               <div className="flex flex-col gap-3 w-sm">
                 {/* Resume Button */}
+                <Link target="_blank " href={"https://drive.google.com/file/d/1KeoiaWYRFC-f8Nt8UTTLrDbsD4DPXZDE/view?usp=sharing"}>
                 <Button
                   variant=""
                   className="w-full  px-6 py-3 text-sm sm:text-base"
-                >
+                  >
                   <span className="flex items-center justify-center">
                     <File className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                     Resume
                   </span>
                 </Button>
+                  </Link>
 
                 {/* Social Links */}
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3 w-full">
                   {/* GitHub */}
-                  <Link
+                  <Link target="_blank "
                     href="https://github.com/Blue-Onion"
                     className="w-full sm:w-auto"
                   >
@@ -55,15 +57,15 @@ const Home = () => {
                   </Link>
 
                   {/* LinkedIn */}
-                  <Link
-                    href="https://linkedin.com/in/your-profile"
+                  <Link target="_blank "
+                    href="https://www.linkedin.com/in/aditya-singh-rawat-0a7416326/"
                     className="w-full sm:w-auto"
                   >
                     <Button
                       variant="outline"
                       className="w-full sm:w-auto flex items-center justify-center px-5 py-3 text-sm sm:text-base font-semibold tracking-tight "
                     >
-                      <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                      <Link target="_blank " href={"https://www.linkedin.com/in/aditya-singh-rawat-0a7416326/"} className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                       <span className="">LinkedIn</span>
 
                     </Button>
