@@ -25,7 +25,7 @@ const Home = () => {
               </p>
 
               {/* Buttons Section */}
-              <div className="flex flex-col gap-3 w-sm">
+              <div className="flex flex-col gap-3 lg:w-sm">
                 {/* Resume Button */}
                 <Link target="_blank " href={"https://drive.google.com/file/d/1KeoiaWYRFC-f8Nt8UTTLrDbsD4DPXZDE/view?usp=sharing"}>
                 <Button
@@ -44,11 +44,11 @@ const Home = () => {
                   {/* GitHub */}
                   <Link target="_blank "
                     href="https://github.com/Blue-Onion"
-                    className="w-full sm:w-auto"
+                    className="w-full "
                   >
                     <Button
                       variant="outline"
-                      className="w-full sm:w-auto flex items-center justify-center px-5 py-3 text-sm sm:text-base font-semibold tracking-tight "
+                      className="w-full  flex items-center justify-center px-5 py-3 text-sm sm:text-base font-semibold tracking-tight "
                     >
                       <Github className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                       <span className="">GitHub</span>
@@ -59,12 +59,12 @@ const Home = () => {
                   {/* LinkedIn */}
                   <Link target="_blank "
                     href="https://www.linkedin.com/in/aditya-singh-rawat-0a7416326/"
-                    className="w-full sm:w-auto"
+                    className="w-full "
                   >
                     <Link target="_blank " href={"https://www.linkedin.com/in/aditya-singh-rawat-0a7416326/"}/>
                     <Button
                       variant="outline"
-                      className="w-full sm:w-auto flex items-center justify-center px-5 py-3 text-sm sm:text-base font-semibold tracking-tight "
+                      className="w-full  flex items-center justify-center px-5 py-3 text-sm sm:text-base font-semibold tracking-tight "
                     >
                       <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                       <span className="">LinkedIn</span>
@@ -73,13 +73,7 @@ const Home = () => {
                   </Link>
 
                   {/* Hire Me */}
-                  <Button
-                    variant="outline"
-                    className="w-full sm:w-auto flex items-center justify-center px-5 py-3 text-sm sm:text-base font-semibold tracking-tight "
-                  >
-                    <File className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                    Hire Me
-                  </Button>
+                 
                 </div>
               </div>
             </div>
