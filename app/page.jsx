@@ -21,8 +21,6 @@ export default function Page() {
         <div className="fixed inset-0 -z-10">
           <Robo onReady={() => setLoaded(true)} />
         </div>
-
-        {/* Main content */}
         <Home />
       </SmoothScroll>
     </main>
