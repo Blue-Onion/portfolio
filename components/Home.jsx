@@ -61,11 +61,12 @@ const Home = () => {
                     href="https://www.linkedin.com/in/aditya-singh-rawat-0a7416326/"
                     className="w-full sm:w-auto"
                   >
+                    <Link target="_blank " href={"https://www.linkedin.com/in/aditya-singh-rawat-0a7416326/"}/>
                     <Button
                       variant="outline"
                       className="w-full sm:w-auto flex items-center justify-center px-5 py-3 text-sm sm:text-base font-semibold tracking-tight "
                     >
-                      <Link target="_blank " href={"https://www.linkedin.com/in/aditya-singh-rawat-0a7416326/"} className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                      <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                       <span className="">LinkedIn</span>
 
                     </Button>
