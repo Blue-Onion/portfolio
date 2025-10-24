@@ -61,7 +61,7 @@ const Home = () => {
                     href="https://www.linkedin.com/in/aditya-singh-rawat-0a7416326/"
                     className="w-full "
                   >
-                    <Link target="_blank " href={"https://www.linkedin.com/in/aditya-singh-rawat-0a7416326/"}/>
+
                     <Button
                       variant="outline"
                       className="w-full  flex items-center justify-center px-5 py-3 text-sm sm:text-base font-semibold tracking-tight "
