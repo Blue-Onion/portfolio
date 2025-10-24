@@ -6,7 +6,7 @@ export default function Robo({ onReady }) {
   const splineContainer = useRef();
 
   return (
-    <div className="min-h-screen flex justify-center items-center md:justify-end">
+    <div className="min-h-screen flex justify-center items-end md:items-center md:justify-end">
       <div className="w-full h-full flex justify-center items-center lg:justify-end">
         <div className="flex justify-center items-center md:justify-end mt-12 md:mt-0">
           <div
@@ -24,7 +24,7 @@ export default function Robo({ onReady }) {
               scene="/assets/robo.spline"
               onLoad={() => {
                 console.log("Spline loaded ✅");
-                onReady?.(); // notify parent
+                onReady?.(); 
               }}
             />
           </div>
