@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+
 
 const ProjectThumbnail = ({ image,title }) => {
   return (

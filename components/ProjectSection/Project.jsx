@@ -9,8 +9,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import ProjectThumbnail from "./ProjectThumbnail";
 import ProjectCard from "./projectCard";
+import ProjectThumbnail from "./ProjectThumbnail";
+
+
 
 const Project = () => {
   return (
