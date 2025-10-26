@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <nav className="max-w-7xl mx-auto p-4 mb-24  backdrop:backdrop-blur-3xl lg:mb-0 ">
+    <nav className="max-w-7xl mx-auto px-4 mb-24  backdrop:backdrop-blur-3xl lg:mb-0 ">
       <div className="flex justify-between">
         <div className="span">Blue Onion</div>
         <div className="flex gap-3">
