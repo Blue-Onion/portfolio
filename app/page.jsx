@@ -12,24 +12,22 @@ export default function Page() {
 
   return (
     <>
-
       {!loaded && (
         <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
           <p className="text-white text-lg animate-pulse">Loading robot...</p>
         </div>
       )}
 
-      <SmoothScroll >
-
+      <SmoothScroll>
         <div className="absolute inset-0 -z-10">
           <Robo onReady={() => setLoaded(true)} />
         </div>
-        <main className="space-y-6">
+        <main className="flex flex-col gap-20">
+  <Home />
+  <Skills />
+  <Project />
+</main>
 
-        <Home />
-        <Skills/>
-        <Project/>
-        </main>
       </SmoothScroll>
     </>
   );

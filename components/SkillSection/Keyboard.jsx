@@ -3,37 +3,43 @@ import { useState, useRef } from "react";
 import Spline from "@splinetool/react-spline";
 
 const Keyboard = () => {
-    const [hoveredKey, setHoveredKey] = useState(null);
+  const [hoveredKey, setHoveredKey] = useState(null);
   const splineRef = useRef();
 
-  function onLoad(splineApp) {
+  const onLoad = (splineApp) => {
     splineRef.current = splineApp;
-  }
+  };
 
-  function handleHover(e) {
-    if (e.target.name && e.target.name.startsWith("key")) {
+  const handleHover = (e) => {
+    if (e.target.name) {
       setHoveredKey(e.target.name);
     } else {
       setHoveredKey(null);
     }
-  }
-
-  return (
-    <div className="w-full h-full  ">
-        <Spline
-        className=""
-          scene="assets/aditya_copy.spline"
-          onLoad={onLoad}
-          onSplineMouseHover={handleHover}
-        />
-
-        {hoveredKey && (
-          <div className="hover-indicator mt-4 p-4 bg-black text-white rounded-lg">
-            Currently hovering: {hoveredKey.replace("key_", "").replace("_", " ")}
-          </div>
-        )}
-      </div>
-  )
+  };
+if(hoveredKey){
+  console.log(hoveredKey);
+  
 }
+  return (
+    <div className="relative w-full flex flex-col items-center justify-center">
 
-export default Keyboard
+      <Spline
+        scene="assets/aditya_copy.spline"
+        onLoad={onLoad}
+        onMouseOver={handleHover}
+        className="w-full h-[full] scale-130 md:scale-none" 
+        style={{ background: "none" }}
+      />
+
+      {/* Key Name Display */}
+      {hoveredKey && (
+        <div className="absolute top-5 text-white text-xl sm:text-2xl md:text-3xl font-bold bg-black bg-opacity-50 px-4 py-2 rounded-lg">
+          {hoveredKey}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Keyboard;

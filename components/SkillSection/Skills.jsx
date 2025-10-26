@@ -2,12 +2,15 @@ import Keyboard from "./Keyboard";
 
 const Skills = () => {
   return (
-    <section className="min-h-screen h-full p-4 grid place-items-center">
-      <h2 className="text-5xl md:text-7xl lg:text-9xl gradient-title mb-8">
+    <section
+      id="skills"
+      className=" gap-9 h-full p-6 flex flex-col items-center justify-center text-center"
+    >
+      <h2 className="text-6xl  md:text-7xl lg:text-9xl gradient-title p-8">
         Skills
       </h2>
 
-      <div className="w-full h-ful grid place-items-center ">
+      <div className="w-full">
         <Keyboard />
       </div>
     </section>
