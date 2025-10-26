@@ -31,6 +31,10 @@ const Project = () => {
           <Dialog key={project.id}>
             <DialogTrigger>
               <ProjectThumbnail
+              githubLink={project.github}
+
+              liveDemoLink ={project.liveDemo}
+
                 title={project.title}
                 image={project.images[0]}
               />

@@ -24,7 +24,7 @@ export const projects = [
     auth: "Clerk.dev",
     deployment: "Vercel",
     github: "https://github.com/Blue-Onion/medcall",
-    liveDemo: "https://medcall.vercel.app",
+    liveDemo: "https://medmeet-phi.vercel.app/",
     images: ["/med/1.png", 
       "/med/2.png", "/med/3.png", "/med/4.png", "/med/5.png"
     ]
@@ -39,7 +39,7 @@ export const projects = [
     auth: "NextAuth.js",
     deployment: "Vercel",
     github: "https://github.com/Blue-Onion/FinGenie",
-    liveDemo: "https://fingenie.vercel.app",
+    liveDemo: "https://fin-genie-five.vercel.app/",
     images: ["/fin/1.png", 
       "/fin/2.png", "/fin/3.png", "/fin/4.png", "/fin/5.png", "/fin/6.png"
     ]
@@ -54,7 +54,7 @@ export const projects = [
     auth: "Clerk.dev",
     deployment: "Vercel",
     github: "https://github.com/Blue-Onion/Reflect",
-    liveDemo: "https://reflect.vercel.app",
+    liveDemo: "https://reflect-six-mu.vercel.app/",
     images: ["/reflect/1.png", 
       "/reflect/2.png", "/reflect/3.png", "/reflect/4.png", "/reflect/5.png", "/reflect/6.png"
     ]
@@ -73,16 +73,16 @@ export const projects = [
       "/pourtail/2.png", "/pourtail/3.png", "/pourtail/4.png", "/pourtail/5.png", "/pourtail/6.png"
     ]
   },
-  // {
-  //   id: 6,
-  //   title: "Portfolio Site",
-  //   filename: "portfolio",
-  //   description: "A personal portfolio website built using Next.js, Spline 3D, and ShadCN UI — showcasing projects, skills, and contact information with a modern, responsive, and animated interface.",
-  //   frontend: ["Next.js", "Spline 3D", "ShadCN UI", "Tailwind CSS"],
-  //   backend: [],
-  //   deployment: "Vercel",
-  //   github: "https://github.com/Blue-Onion/portfolio",
-  //   liveDemo: "https://blueonion.dev",
-  //   images: ["/portfolio/1.png", "/portfolio/2.png"]
-  // }
+  {
+    id: 6,
+    title: "Portfolio Site",
+    filename: "portfolio",
+    description: "A personal portfolio website built using Next.js, Spline 3D, and ShadCN UI — showcasing projects, skills, and contact information with a modern, responsive, and animated interface.",
+    frontend: ["Next.js", "Spline 3D", "ShadCN UI", "Tailwind CSS"],
+    backend: [],
+    deployment: "Vercel",
+    github: "https://github.com/Blue-Onion/portfolio",
+    liveDemo: "https://aditya-portfolio-khaki-nu.vercel.app",
+    images: ["/port/1.png", "/port/2.png"]
+  }
 ];

@@ -1,7 +1,6 @@
 import { Inter, Archivo_Black } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Particles from "@/components/Particles";
 
 const inter = Inter({ subsets: ["latin"] });
 const archivoBlack = Archivo_Black({
@@ -57,28 +56,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body className={`${archivoBlack.className}`}>
-        <div className="relative w-screen min-h-screen bg-black overflow-hidden">
-          {/* Background effect */}
-          <div className="absolute inset-0 z-0">
-            <Particles
-              particleColors={["#ffffff", "#ffffff"]}
-              particleCount={200}
-              particleSpread={10}
-              speed={0.1}
-              particleBaseSize={100}
-              moveParticlesOnHover={false}
-              alphaParticles={false}
-              disableRotation={false}
-            />
-          </div>
+        <div className="relative w-screen min-h-screen  overflow-hidden">
+          {/* Grid Background */}
+          <div className="grid-background"></div>
 
           {/* Navbar */}
-          <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md ">
+          <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md">
             <Navbar />
           </header>
 
           {/* Main content */}
-          <main className="relative z-10 w-full pt-24 p-4 sm:p-6 max-w-8xl 2xl:max-w-[1600px] mx-auto min-h-screen">
+          <main className="relative z-10 w-full pt-24 p-4 sm:p-6 max-w-6xl 2xl:max-w-[1600px] mx-auto min-h-screen">
             {children}
           </main>
 

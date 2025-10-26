@@ -23,11 +23,10 @@ export default function Page() {
           <Robo onReady={() => setLoaded(true)} />
         </div>
         <main className="flex flex-col gap-20">
-  <Home />
-  <Skills />
-  <Project />
-</main>
-
+          <Home />
+          <Skills />
+          <Project />
+        </main>
       </SmoothScroll>
     </>
   );
