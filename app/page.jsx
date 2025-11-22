@@ -18,7 +18,7 @@ export default function Page() {
         </div>
       )}
 
-      <SmoothScroll>
+
         <div className="absolute inset-0 -z-10">
           <Robo onReady={() => setLoaded(true)} />
         </div>
@@ -27,7 +27,7 @@ export default function Page() {
           <Skills />
           <Project />
         </main>
-      </SmoothScroll>
+   
     </>
   );
 }
